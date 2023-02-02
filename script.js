@@ -19,43 +19,49 @@ const quizArray = [
     id: "0",
     question: "Which is the only continent in the world without a desert?",
     options: ["North America", "Asia", "Africa", "Europe"],
-    correct: "Europe",
+    correct: ["Europe"],
   },
   {
     id: "1",
     question: "What is the capital of France?",
     options: ["New York", "London", "Dublin", "Paris"],
-    correct: "Paris",
+    correct: ["Paris"],
   },
   {
     id: "2",
     question: "What is the longest river in the world?",
     options: ["Nile", "Yangtze", "Mississippi", "Amazon"],
-    correct: "Nile",
+    correct: ["Nile"],
   },
   {
     id: "3",
     question: "Which is the most widely spoken language in the world?",
     options: ["Spanish", "Mandarin", "English", "German"],
-    correct: "Mandarin",
+    correct: ["Mandarin"],
   },
   {
     id: "4",
     question: "What is the capital of Canada?",
     options: ["Ottawa", "Toronto", "Vancouver", "Edmonton"],
-    correct: "Ottawa",
+    correct: ["Ottawa"],
   },
   {
     id: "5",
     question: "What is not a programming language?",
     options: ["JavaScript", "C++", "HTML", "Kotlin"],
-    correct: "HTML",
+    correct: ["HTML"],
   },
   {
     id: "6",
     question: "What year was JavaScript launched",
     options: ["1996", "1995", "1994", "2000"],
-    correct: "1995",
+    correct: ["1995"],
+  },
+  {
+    id: "7",
+    question: "Which of these characters are friends with Harry Potter?",
+    options: ["Ron Weasley", "Draco Malfoy", "Hermione Granger", "Bellatrix Lestrange"],
+    correct: ["Ron Weasley","Hermione Granger"],
   },
 ];
 
@@ -141,7 +147,7 @@ function checker(userOption) {
   let options = question.querySelectorAll(".option-div");
 
   //if user clicked answer == correct option stored in object
-  if (userSolution === quizArray[questionCount].correct) {
+  if (quizArray[questionCount].correct.includes(userSolution)) {
     userOption.classList.add("correct");
     scoreCount++;
   } else {
