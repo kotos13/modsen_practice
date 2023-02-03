@@ -60,8 +60,34 @@ const quizArray = [
   {
     id: "7",
     question: "Which of these characters are friends with Harry Potter?",
-    options: ["Ron Weasley", "Draco Malfoy", "Hermione Granger", "Bellatrix Lestrange"],
-    correct: ["Ron Weasley","Hermione Granger"],
+    options: [
+      "Ron Weasley",
+      "Draco Malfoy",
+      "Hermione Granger",
+      "Bellatrix Lestrange",
+    ],
+    correct: ["Ron Weasley", "Hermione Granger"],
+  },
+  {
+    id: "8",
+    question: "Which rivers flow through Egypt?",
+    options: ["Nile", "Amazon", "Yangtze", "Congo"],
+    correct: ["Nile", "Congo"],
+  },
+  {
+    id: "9",
+    question:
+      "Who are the members of the Avengers in the Marvel Cinematic Universe?",
+    options: [
+      "Iron Man, Captain America, Thor, Hulk, Hawkeye, Black Widow",
+      "Spider-Man, Doctor Strange, Ant-Man, Captain Marvel, Black Panther",
+      "Guardians of the Galaxy (Star-Lord, Rocket Raccoon, Gamora, Drax, Groot)",
+      "X-Men (Wolverine, Rogue, Cyclops, Jean Grey, Storm, Nightcrawler)",
+    ],
+    correct: [
+      "Iron Man, Captain America, Thor, Hulk, Hawkeye, Black Widow",
+      "Spider-Man, Doctor Strange, Ant-Man, Captain Marvel, Black Panther",
+    ],
   },
 ];
 
