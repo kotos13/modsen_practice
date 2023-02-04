@@ -1,14 +1,15 @@
 //required variables
-let quizContainer = document.getElementById("container");
-let nextBtn = document.getElementById("next-button");
-let countOfQuestion = document.querySelector(".number-of-question");
-let displayContainer = document.getElementById("display-container");
-let scoreContainer = document.querySelector(".score-container");
-let restart = document.getElementById("restart");
-let userScore = document.getElementById("user-score");
-let startScreen = document.querySelector(".start-screen");
-let startButton = document.getElementById("start-button");
-let questionCount;
+const timeLeft = document.querySelector(".time-left");
+const quizContainer = document.getElementById("container");
+const nextBtn = document.getElementById("next-button");
+const countOfQuestion = document.querySelector(".number-of-question");
+const displayContainer = document.getElementById("display-container");
+const scoreContainer = document.querySelector(".score-container");
+const restart = document.getElementById("restart");
+const userScore = document.getElementById("user-score");
+const startScreen = document.querySelector(".start-screen");
+const startButton = document.getElementById("start-button");
+let questionCount = 0;
 let scoreCount = 0;
 let count = 11;
 let countdown;
@@ -125,6 +126,18 @@ nextBtn.addEventListener(
   })
 );
 
+//Timer
+const timerDisplay = () => {
+  countdown = setInterval(() => {
+    count--;
+    timeLeft.innerHTML = `${count}s`;
+    if (count == 0) {
+      clearInterval(countdown);
+      displayNext();
+    }
+  }, 1000);
+};
+
 //display quiz
 const quizDisplay = (questionCount) => {
   let quizCards = document.querySelectorAll(".container-mid");
@@ -185,6 +198,8 @@ function checker(userOption) {
       }
     });
   }
+  //clear interval(stop timer)
+  clearInterval(countdown);
   //disable all options
   options.forEach((element) => {
     element.disabled = true;
@@ -198,6 +213,8 @@ function initial() {
   questionCount = 0;
   scoreCount = 0;
   count = 11;
+  clearInterval(countdown);
+  timerDisplay();
   quizCreator();
   quizDisplay(questionCount);
 }
