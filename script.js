@@ -77,18 +77,40 @@ const quizArray = [
   },
   {
     id: "9",
+    question: "What are the types of computer memory?",
+    options: ["RAM", "ROM", "Hard Drive", "Flash"],
+    correct: ["RAM", "ROM"],
+  },
+  {
+    id: "10",
+    question: "What are the four basic operations of arithmetic",
+    options: ["Addition", " Subtraction", "Modulo", "Factorial"],
+    correct: ["Addition", " Subtraction"],
+  },
+  {
+    id: "11",
+    question: "Who painted the Mona Lisa?",
+    options: ["Leonardo da Vinci", "Michelangelo", "Raphael", "Titian"],
+    correct: ["Leonardo da Vinci"],
+  },
+  {
+    id: "12",
     question:
-      "Who are the members of the Avengers in the Marvel Cinematic Universe?",
-    options: [
-      "Iron Man, Captain America, Thor, Hulk, Hawkeye, Black Widow",
-      "Spider-Man, Doctor Strange, Ant-Man, Captain Marvel, Black Panther",
-      "Guardians of the Galaxy (Star-Lord, Rocket Raccoon, Gamora, Drax, Groot)",
-      "X-Men (Wolverine, Rogue, Cyclops, Jean Grey, Storm, Nightcrawler)",
-    ],
-    correct: [
-      "Iron Man, Captain America, Thor, Hulk, Hawkeye, Black Widow",
-      "Spider-Man, Doctor Strange, Ant-Man, Captain Marvel, Black Panther",
-    ],
+      "What are the fundamental units of measurement in the International System of Units (SI)?",
+    options: ["Meter", "Kilogram", "Second", "Ampere"],
+    correct: ["Meter", " Kilogram"],
+  },
+  {
+    id: "13",
+    question: "What are the five senses?",
+    options: ["Touch", "Hearing", "Sight", "Smell"],
+    correct: ["Hearing", " Sight"],
+  },
+  {
+    id: "14",
+    question: "What is the chemical symbol for gold?",
+    options: ["Au", "Ag", "Al", "Ar"],
+    correct: ["Au"],
   },
 ];
 
