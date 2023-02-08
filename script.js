@@ -11,7 +11,7 @@ const startScreen = document.querySelector(".start-screen");
 const startButton = document.getElementById("start-button");
 let questionCount = 0;
 let scoreCount = 0;
-let count = 11;
+let count = 16;
 let countdown;
 
 //questions and options
@@ -234,7 +234,7 @@ function initial() {
   quizContainer.innerHTML = "";
   questionCount = 0;
   scoreCount = 0;
-  count = 11;
+  count = 16;
   clearInterval(countdown);
   timerDisplay();
   quizCreator();
