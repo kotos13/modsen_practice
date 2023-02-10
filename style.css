@@ -24,7 +24,7 @@ body {
 button {
     border: none;
     outline: none;
-    cursor: pointer;
+    cursor: grab;
 }
 
 #start-button,
